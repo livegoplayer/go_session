@@ -8,7 +8,8 @@ import (
 )
 
 func InitRedisSession(host string, port string, password string, db int, pre string) {
-	redisHelper.InitRedisHelper(host, port, password, db, pre)
+	//设置最大超时容忍度
+	redisHelper.InitRedisHelper(host, port, password, db, pre, 2*time.Second)
 }
 
 func CheckUserSession(key string) int64 {
