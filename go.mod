@@ -1,6 +1,6 @@
 module github.com/livegoplayer/go_session
 
-go 1.14
+go 1.20
 
 require (
 	github.com/fsnotify/fsnotify v1.6.0 // indirect
