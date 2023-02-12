@@ -3,7 +3,6 @@ package go_session
 import (
 	"time"
 
-	myHelper "github.com/livegoplayer/go_helper"
 	redisHelper "github.com/livegoplayer/go_redis_helper"
 )
 
@@ -17,5 +16,5 @@ func CheckUserSession(key string) int64 {
 }
 
 func SetUserSession(key string, expireTime time.Duration) {
-	redisHelper.SetCacheData(key, myHelper.StringToBytes("1"), expireTime)
+	redisHelper.SetCacheData(key, "1", expireTime)
 }
